@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Clase integradora </title>
+</head>
+<body>
+    <h1>Formulario de Registro </h1>
+
+    <form onsubmit="registro (event)">
+
+        <label> 
+            Ingrese su email
+            <input type="email" id="email" required>
+        </label>
+
+        <label>
+            Ingrese su contraseña:
+            <input type="password" id="password" required>
+        </label>
+
+        <label>
+            Confirmar contraseña:
+            <input type="password" id="confirmacion" required>
+        </label>
+
+        <label>
+            Ingrese su edad:
+            <input type="number" id="number" placeholder="">
+        </label>
+
+        <button id="btn">Registrar</button>
+
+    </form>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
