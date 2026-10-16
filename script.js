@@ -1,27 +1,29 @@
-// console.log("Hola Mundo");
 
 const inputEmail = document.getElementById("email");
 const inputPassword = document.getElementById("password");
 const inputConfirmacion = document.getElementById("confirmacion");
-const inputEdad = document.getElementById("number");
 
 const registro = (event) => {
     event.preventDefault();
 
-    const emailUser = inputEmail.value;
+    const emailUser = inputEmail.value.trim();
     const passwordUser = inputPassword.value;
     const confirmacionUser = inputConfirmacion.value;
-    const edadUser = inputEdad.value;
+
+    if (passwordUser !== confirmacionUser) {
+        alert("Las contraseñas no coinciden.");
+        inputConfirmacion.focus();
+        return;
+    }
 
     localStorage.setItem("usuarioRegistrado", emailUser);
-
-    console.log(emailUser, passwordUser, confirmacionUser, edadUser);
+    window.location.href = "bienvenida.html";
 }
 
 const validacion = () => {
-
+    const usuarioRegistrado = localStorage.getItem(usuarioRegistrado)
 }
 
 const cerrarSesion = () => {
-
+ 
 }

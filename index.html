@@ -4,36 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Clase integradora </title>
+    <title>Registro</title>
 </head>
 <body>
-    <h1>Formulario de Registro </h1>
+    <main class="registro">
+        <h1>Crear una cuenta</h1>
+        <p class="descripcion">Completa tus datos para registrarte.</p>
 
-    <form onsubmit="registro (event)">
+        <form onsubmit="registro(event)">
+            <label for="email">
+                Email
+                <input type="email" id="email" name="email" autocomplete="email" placeholder="nombre@ejemplo.com" required>
+            </label>
 
-        <label> 
-            Ingrese su email
-            <input type="email" id="email" required>
-        </label>
+            <label for="password">
+                Contraseña
+                <input type="password" id="password" name="password" autocomplete="new-password" required>
+            </label>
 
-        <label>
-            Ingrese su contraseña:
-            <input type="password" id="password" required>
-        </label>
+            <label for="confirmacion">
+                Confirmación de contraseña
+                <input type="password" id="confirmacion" name="confirmacion" autocomplete="new-password" required>
+            </label>
 
-        <label>
-            Confirmar contraseña:
-            <input type="password" id="confirmacion" required>
-        </label>
-
-        <label>
-            Ingrese su edad:
-            <input type="number" id="number" placeholder="">
-        </label>
-
-        <button id="btn">Registrar</button>
-
-    </form>
+            <button id="btn" type="submit">Registrarme</button>
+        </form>
+    </main>
     
 
     <script src="script.js"></script>
