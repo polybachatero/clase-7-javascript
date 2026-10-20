@@ -18,12 +18,33 @@ const registro = (event) => {
 
     localStorage.setItem("usuarioRegistrado", emailUser);
     window.location.href = "bienvenida.html";
+
+    formulario.reset();
 }
 
 const validacion = () => {
     const usuarioRegistrado = localStorage.getItem(usuarioRegistrado)
 }
+/*
+const validacion = () => {
+    const usuarioRegistrado = localStorage.getItem("emailRegistrado");
+
+    if (usuarioRegistrado === null) {
+        alert("No hay ningún usuario registrado.");
+
+        window.location.href = "index.html";
+    } else {
+        document.getElementById("mensaje").textContent =
+            "¡Bienvenido/a, " + usuarioRegistrado + "!";
+    }
+};
+
 
 const cerrarSesion = () => {
- 
+
 }
+*/
+
+const salir = () => {
+    window.location.href = "index.html";
+};

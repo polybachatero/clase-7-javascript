@@ -7,11 +7,29 @@
     <title>Bienvenida</title>
 </head>
 <body>
-    
+    <main class="registro2">
+
     <h1>Bienvenid@</h1>
 
-    <button>Salir</button>
+    <button type="submit" onclick="salir()">Salir</button>
 
-    <script src="script.js"></script>
+    </main>
+    <script>
+    const validacion = () => {
+        const usuarioRegistrado = localStorage.getItem("emailRegistrado");
+
+        if (usuarioRegistrado === null) {
+            alert("No hay ningún usuario registrado.");
+
+            window.location.href = "index.html";
+        } else {
+            document.getElementById("mensaje").textContent =
+                "¡Bienvenido/a, " + usuarioRegistrado + "!";
+        }
+    };
+
+    validacion();
+    </script>
+
 </body>
 </html>
